@@ -1,5 +1,5 @@
 
-# CKAN Meetup @ CSC 20.2.2015 | Avoindata.fi
+# Open Finland Challenge Meetup @ Gofore 8.10.2015 | Avoindata.fi
 
 Jari Voutilainen [@Zharktas](https://twitter.com/Zharktas) | [@GoforeOy](https://twitter.com/GoforeOy)
 
@@ -8,7 +8,7 @@ Jari Voutilainen [@Zharktas](https://twitter.com/Zharktas) | [@GoforeOy](https:/
 ## Agenda
 
 * Avoindata.fi
-* Kuulumiset edellisen CKAN meetupin jälkeen
+* Kesän kehitys
 * Vuoden 2015 suunnitelmat
 
 ---
@@ -29,71 +29,32 @@ Jari Voutilainen [@Zharktas](https://twitter.com/Zharktas) | [@GoforeOy](https:/
 
 --
 
-## Avoimuus
+# Kesän kehitys
 
-* Palvelu on monikielinen ja responsiivinen.
-* Avoin kehitysmalli: lähdekoodit on saatavilla [Githubista](https://github.com/yhteentoimivuuspalvelut), [beta.avoindata.fi](http://beta.avoindata.fi/) on avoin testausympäristö, isommista muutoksista tiedotetaan somessa ja palvelun uutisissa.
-
---
-
-## Tekniikat ja menetelmät
-
-* Alustoina uusin CKAN (2.2.1) ja Drupal (7.34).
-* Bugiraportteja ja korjauksia tehty CKAN:n coreen.
-* Organisaatiohierarkiat
-* Tietoaineiston metatietoja laajennettu useilla tietokentillä ja monikielisyydellä.
-* Palveluun harvestoidaan HRI:n aineistot ja Paikkatietohakemistosta avoindata.fi:lle tägätyt.
+* Uusia ominaisuuksia:
+  * Google analytics visualisoinnit tietoaineistoissa ja aineistolinkeissä.
+  * Organisaatioille voi lähettää tietopyyntöjä
+  * Etusivu uudistettiin
+  * Tietoaineistoja voi kommentoida
 
 --
 
-* Kahden viikon sprintit (scrum), tuotanto päivitetään aina sprintin päätteeksi.
-* Palvelu hostataan AWS:ssä Goforen ylläpitämänä.
-* Päivitykset hoidetaan *Ansible*-konfiguraationhallinnalla
-* Asennus on automatisoitu, myös virtuaalikoneissa oleviin kehitysympäristöihin.
+* CKAN päivitettiin keväällä 2.3:een.
+* Kesälomien aikaan tehtiin teknistä ylläpitoa.
 
 --
 
-* Kehitys tapahtuu Virtualbox virtuaalikoneessa Vagrantin avulla.
-* Vagrant lataa Ubuntu 12.04 virtuaalikoneen, johon palvelu asennetaan ansiblen avulla.
-* Ympäristö on testattu Ubuntu 12.04/14.04 ja Windows 7/8.1 käyttöjärjestelmissä.
-* Tuotanto ja beta päivitetään AWS:ssä samalla ansible provisioinilla kuin kehitysympäristöt.
+# Suunnitelmissa olevat isommat asiat
 
----
-
-# Kuulumiset edellisen meetupin jälkeen
-
-* Palvelu julkastiin 15.9., vähän ennen edellistä meetuppia.
-* Julkaisun jälkeen asiakkaan tilaamat resurssit on käytännössä olleet 1 henkilö.
-* Joten palvelu on pitkälti ollut pienkehityksessä.
+* Tiedon avaajan opas
+* AWS arkkitehtuurin uudistus
+  * Varautuminen mahdolliseen datan hostaukseen.
+* CKAN päivitetään 2.4:ään.
+* Finto integraatio
 
 --
 
-* Suurin osa ajasta menee ylläpitoon: bugeihin, ylläpitäjille tehtyihin käyttöliittymiin, yhteentoimivuus -aineistojen paranteluun.
-* Näkyvimpänä muutoksena on ollut uusi modernimpi ulkoasu, jota kehitetään myös jatkossa.
-* Palvelutietovarannon poistuessa suunnitelmista, siihen liittyvät toiminnallisuudet poistettiin betasta ja organisaatio mallia yksinkertaistettiin.
-
---
-
-* Tietoaineistoihin on lisätty "Liittyvät mediat", jotka ovat visualisointeja, sovelluksia, ideoita yms. Näitä voi kuka tahansa rekisteröitynyt lisätä ja organisaation ylläpitäjällä on vastuu moderoida ne tarvittaessa.
-* Pienempinä muutoksina paremmat organisaatiolistaukset, alustava 5-portainen laatuluokitus, harvestereiden vikatoleranssin parantamista yms.
-
----
-
-# Vuosi 2015
-
-* Asiakas tilannut lisäresursseja, joten palveluun on tulossa parannuksia.
-* Tietoaineistojen ja organisaatioiden kommentointi, voi esimerkiksi käyttää tietopyyntöihin.
-* 5-portaisen laatuluokituksen parantelut, nykyinen toteutus melko yksinkertainen
-* Käytettävyysparannukset, mm. etusivusta tehdään paremmin palvelua palveleva.
-* Tietoaineistokohtaiset analyyttiikkatiedot.
-
---
-
-* Teknisiä parannuksia.
-* CKANin päivitys piakkoin tulevaan 2.3:een.
-* Tietopyynnöille ehkä oma toiminnallisuus.
-* Harvesteri integraatioita parannetaan.
-
----
-
-# Kysyttävää ?
+* Uusi tietomalli
+  * ckanext-scheming, ckanext-fluent
+  * rajapinta tuottaa järkevämmän vastauksen
+  * Samalla uudistetaan tietojen syöttölomakkeet
