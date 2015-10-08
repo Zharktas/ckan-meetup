@@ -27,7 +27,7 @@ Jari Voutilainen [@Zharktas](https://twitter.com/Zharktas) | [@GoforeOy](https:/
 * Alustoina rinnakkain olevat Drupal ja CKAN.
 * Suurin osa työstä keskittyy CKAN:n kustomointiin.
 
---
+---
 
 # Kesän kehitys
 
@@ -42,7 +42,7 @@ Jari Voutilainen [@Zharktas](https://twitter.com/Zharktas) | [@GoforeOy](https:/
 * CKAN päivitettiin keväällä 2.3:een.
 * Kesälomien aikaan tehtiin teknistä ylläpitoa.
 
---
+---
 
 # Suunnitelmissa olevat isommat asiat
 
@@ -58,3 +58,23 @@ Jari Voutilainen [@Zharktas](https://twitter.com/Zharktas) | [@GoforeOy](https:/
   * ckanext-scheming, ckanext-fluent
   * rajapinta tuottaa järkevämmän vastauksen
   * Samalla uudistetaan tietojen syöttölomakkeet
+
+---
+
+# Open Finland Challenge
+
+* Avoindata.fi currently harvests datasets from hri.fi and paikkatietohakemisto.fi
+* Harvesters are implemented in [ckanext-harvest](https://github.com/ckan/ckanext-harvest) extension
+* Extension provides [CKAN harvester](https://github.com/ckan/ckanext-harvest/blob/master/ckanext/harvest/harvesters/ckanharvester.py) which is used to harvest hri datasets.
+* Paikkatietohakemisto's datasets are harvested using [spatial csw harvester](https://github.com/ckan/ckanext-spatial/blob/master/ckanext/spatial/harvesters/csw.py).
+* Current modified harvesters be found from [Github](https://github.com/yhteentoimivuuspalvelut/ytp/tree/master/modules/ckanext-ytp-main/ckanext/ytp/organizations/harvesters)
+
+--
+
+## Requirements
+
+* Possible data source must have restish urls.
+* Implemententation should be based on [base harvester](https://github.com/ckan/ckanext-harvest/blob/master/ckanext/harvest/harvesters/base.py)
+* Implementation should be provided through [Github Pull Request](https://github.com/yhteentoimivuuspalvelut/ytp/pulls)
+* All problems with dev environments should be reported through Github issues.
+* If the implementation is decent enough, avoindata.fi devs will get permissions to harvest the data and install the harvester.
